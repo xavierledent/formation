@@ -270,7 +270,7 @@
       <dt>Modèle</dt>
       <dd>Le « cerveau » de Claude, que vous choisissez. Il en existe plusieurs : <strong>Sonnet</strong>, le standard, équilibré (celui qu'on prend pour commencer) ; <strong>Opus</strong>, plus puissant, pour les tâches complexes ; <strong>Fable</strong>, le plus puissant. Plus un modèle est puissant, plus il est lent et plus il consomme de votre quota d'usage. La liste dépend de votre compte.</dd>
       <dt>Niveau d'effort</dt>
-      <dd>Plus l'effort est élevé, plus Claude cherche d'informations avant de construire et vérifie son résultat avant de vous le rendre, mais plus c'est lent et gourmand en quota. Cela ne le rend pas infaillible : le test reste de votre côté. Pour commencer : effort <strong>moyen</strong>.</dd>
+      <dd>Plus l'effort est élevé, plus Claude réfléchit longtemps avant de construire et vérifie son résultat avant de vous le rendre, mais plus c'est lent et gourmand en quota. Cela ne le rend pas infaillible : le test reste de votre côté. Pour commencer : effort <strong>moyen</strong>.</dd>
       <dt>Fenêtre de contexte</dt>
       <dd>La « table de travail » de Claude : tout ce qui est dans la conversation (vos messages, ses réponses, les fichiers joints) est sous ses yeux ; ce qui n'y est pas, il ne le voit pas. Cette table a une taille limitée. <strong>Plus elle se remplit, plus chaque message consomme de quota, et moins le travail est bon</strong> : Claude finit par perdre le fil des débuts de la conversation. D'où deux habitudes : joindre la partie de chapitre concernée plutôt que la décrire (un extrait précis vaut mieux que tout le chapitre), et ouvrir une nouvelle conversation quand la vôtre devient très longue, en lui redonnant l'essentiel (c'est le rôle de la fiche de contexte, demain).</dd>
       <dt>Fichier HTML</dt>
@@ -297,7 +297,8 @@
     <div class="prompt">
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande n°1, modifiable">Voici en pièce jointe <mark>[la partie de mon chapitre que je veux travailler]</mark>. Je voudrais en faire un exercice interactif pour mes élèves, afin de <mark>[m'entraîner / réviser / découvrir : choisissez]</mark>.
-Le résultat doit être un seul fichier HTML (tout dans le même fichier, mise en forme et interactivité comprises) que je pourrai télécharger et ouvrir dans mon navigateur, sans rien installer.
+Le résultat doit être un seul fichier HTML (tout dans le même fichier, mise en forme et interactivité comprises) que je pourrai télécharger et ouvrir dans mon navigateur, sans rien installer. Il doit fonctionner sans connexion Internet.
+Quand l'élève se trompe, l'outil doit lui expliquer pourquoi, pas seulement lui dire « faux ».
 Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin pour bien comprendre mon objectif, quelques-unes à la fois.
 Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom de la partie : titre, section ou pages]</mark>.</div>
     </div>
@@ -368,7 +369,10 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
       <li><label><input type="checkbox" data-key="c5-5"><span>Les consignes sont claires pour un élève</span></label></li>
       <li><label><input type="checkbox" data-key="c5-6"><span>L'orthographe est juste</span></label></li>
       <li><label><input type="checkbox" data-key="c5-7"><span>Les maths, les sciences et les corrections sont exactes (je vérifie moi-même)</span></label></li>
+      <li><label><input type="checkbox" data-key="c5-9"><span>J'écris une bonne réponse de plusieurs façons : 0,5 et 0.5, 1/2, avec ou sans unité</span></label></li>
+      <li><label><input type="checkbox" data-key="c5-10"><span>Quand je me trompe, l'outil m'explique pourquoi</span></label></li>
       <li><label><input type="checkbox" data-key="c5-8"><span>Ça tient sur un autre écran (plus petit)</span></label></li>
+      <li><label><input type="checkbox" data-key="c5-11"><span>Il fonctionne sans Internet (Wi-Fi coupé)</span></label></li>
     </ul>
 
     <h3>Ce que j'ai trouvé</h3>
@@ -428,7 +432,7 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
     <details>
       <summary>Vous avancez vite ? Pour aller plus loin</summary>
       <ul>
-        <li>Un retour pour l'élève qui explique l'erreur, pas seulement « faux ».</li>
+        <li>Un exemple résolu que l'élève peut consulter avant de commencer.</li>
         <li>Un indice à demander avant de voir la réponse.</li>
         <li>Des questions tirées au hasard, pour pouvoir refaire l'exercice.</li>
         <li>Un score à la fin, avec un message d'encouragement.</li>

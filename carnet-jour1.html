@@ -326,9 +326,9 @@
     <div class="encart">
       <p><strong><span class="hl">Comment ça marche.</span></strong> En arrivant, faites la section 1 : vous connecter. Ensuite, la journée suit deux grands temps, le matin et l'après-midi. Le formateur présente d'un bloc, puis annonce « À vous de jouer » : vous enchaînez alors plusieurs sections, à votre rythme. Chaque section se suffit à elle-même : un objectif, des étapes, des demandes à copier et des cases à cocher. Bloqué ? Voyez « En cas de blocage ».</p>
     </div>
-    <ul class="checks">
-      <li><label><input type="checkbox" data-key="c0-1"><span><strong>Ce matin</strong> : sections 2 à 4, jusqu'à un premier fichier qui s'ouvre.</span></label></li>
-      <li><label><input type="checkbox" data-key="c0-2"><span><strong>Cet après-midi</strong> : sections 5 à 7, pour tester, améliorer et faire le bilan.</span></label></li>
+    <ul>
+      <li><strong>Ce matin</strong> : sections 2 à 4, jusqu'à un premier fichier qui s'ouvre.</li>
+      <li><strong>Cet après-midi</strong> : sections 5 à 7, pour tester, améliorer et faire le bilan.</li>
     </ul>
   </section>
 
@@ -380,7 +380,6 @@
       <li><label><input type="checkbox" data-key="c3-1"><span>J'ai choisi la partie du chapitre à travailler (une notion, une section) : je la joins seule, ou je dis précisément laquelle</span></label></li>
       <li><label><input type="checkbox" data-key="c3-2"><span>Je sais pour quels élèves (niveau, classe)</span></label></li>
       <li><label><input type="checkbox" data-key="c3-3"><span>Je sais ce que je veux : m'entraîner, réviser, découvrir une notion…</span></label></li>
-      <li><label><input type="checkbox" data-key="c3-4"><span>Je veux un seul fichier HTML à télécharger</span></label></li>
       <li><label><input type="checkbox" data-key="c3-5"><span>Je n'ai pas de données d'élèves dans mes documents (noms, cotes, photos)</span></label></li>
     </ul>
 
@@ -493,10 +492,16 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
       <div class="prompt-bar"><span>Corriger</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour corriger, modifiable">J'ai testé l'exercice et voici ce que j'ai constaté : <mark>[vos problèmes]</mark>. Corrige uniquement ces points et redonne-moi un fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c6-1"><span>J'ai corrigé au moins un problème de ma liste, puis j'ai retesté</span></label></li>
+    </ul>
     <div class="prompt">
       <div class="prompt-bar"><span>Ajouter</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour ajouter, modifiable">Ajoute : <mark>[votre idée]</mark>. Ne change rien d'autre. Fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c6-2"><span>J'ai ajouté une nouveauté, puis j'ai retesté</span></label></li>
+    </ul>
     <div class="prompt">
       <div class="prompt-bar"><span>Demander des idées</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour avoir des idées, modifiable">Donne-moi cinq idées pour améliorer cet exercice pour mes élèves. Ne modifie rien pour l'instant.</div>
@@ -506,19 +511,15 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
       <div class="prompt-bar"><span>Soigner l'aspect</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour soigner l'aspect, modifiable">Rends cet outil plus agréable à regarder et à utiliser pour un élève de <mark>[âge]</mark> ans : lisibilité, espacement, taille des boutons, couleurs. Ne change pas le contenu ni les corrections. Fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c6-4"><span>J'ai amélioré l'aspect ou la facilité d'utilisation, puis j'ai retesté</span></label></li>
+    </ul>
 
     <div class="encart astuce">
       <p><strong><span class="hl">Fonctionnel, ce n'est pas fini.</span></strong> Un outil qui marche, c'est la première étape. Je passe beaucoup de temps à rendre mes outils agréables à l'œil et à utiliser, tout simplement parce que c'est important : les élèves sont comme nous, ils se lassent vite d'un outil laid ou mal conçu. Plus vous êtes exigeant, meilleur est le résultat, et c'est vous qui fixez le niveau.</p>
     </div>
 
     <div class="note"><label for="n6">Notes : ce que j'ai demandé, ce que ça a donné</label><textarea id="n6" data-key="n6" data-label="Ce que j'ai demandé, ce que ça a donné" placeholder="Écrivez ici…"></textarea></div>
-
-    <ul class="checks">
-      <li><label><input type="checkbox" data-key="c6-1"><span>J'ai corrigé au moins un problème de ma liste</span></label></li>
-      <li><label><input type="checkbox" data-key="c6-2"><span>J'ai demandé une nouveauté</span></label></li>
-      <li><label><input type="checkbox" data-key="c6-4"><span>J'ai demandé d'améliorer l'aspect ou la facilité d'utilisation</span></label></li>
-      <li><label><input type="checkbox" data-key="c6-3"><span>J'ai retesté</span></label></li>
-    </ul>
 
     <details class="plus">
       <summary>Vous avancez vite ? Pour aller plus loin</summary>

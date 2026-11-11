@@ -325,9 +325,9 @@
     <div class="encart">
       <p><strong><span class="hl">Comment ça marche.</span></strong> En arrivant, faites la section 1. Ensuite, comme hier, deux grands temps : le formateur présente d'un bloc, puis annonce « À vous de jouer » et vous enchaînez plusieurs sections, à votre rythme. Chaque section se suffit à elle-même. Bloqué ? Voyez « En cas de blocage ».</p>
     </div>
-    <ul class="checks">
-      <li><label><input type="checkbox" data-key="c0-1"><span><strong>Ce matin</strong> : sections 2 et 3, votre fiche de contexte puis un outil qui avance.</span></label></li>
-      <li><label><input type="checkbox" data-key="c0-2"><span><strong>Cet après-midi</strong> : sections 4 et 5, puis la clôture tous ensemble.</span></label></li>
+    <ul>
+      <li><strong>Ce matin</strong> : sections 2 et 3, votre fiche de contexte puis un outil qui avance.</li>
+      <li><strong>Cet après-midi</strong> : sections 4 et 5, puis la clôture tous ensemble.</li>
     </ul>
   </section>
 
@@ -382,7 +382,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     </div>
 
     <h3>Écrire la vôtre</h3>
-    <p>Reprenez vos notes d'hier : dans le carnet du jour 1, la partie Bilan, « ce que j'ai dû réexpliquer à l'IA ». C'est la matière de votre fiche. Voici ce qu'elle peut contenir :</p>
+    <p>Reprenez vos notes d'hier : dans le carnet du jour 1, la partie Bilan, « ce que j'ai dû réexpliquer à l'IA ». C'est la matière de votre fiche. Elle parle de ces six points : cochez-les au fur et à mesure qu'ils y figurent.</p>
     <ul class="checks">
       <li><label><input type="checkbox" data-key="c2-1"><span>Qui je suis, ma matière, mon niveau</span></label></li>
       <li><label><input type="checkbox" data-key="c2-2"><span>Mes élèves (sans aucun nom)</span></label></li>
@@ -507,6 +507,9 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Question fatidique, modifiable">Que pourrait-on améliorer dans cet outil ? Passe en revue la clarté des consignes, l'intérêt pédagogique, la facilité d'utilisation sur tablette et sur ordinateur, et la présentation. Ne modifie rien : donne-moi une liste classée par importance.</div>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c5-1"><span>J'ai posé la question fatidique</span></label></li>
+    </ul>
     <p>Pour aller plus loin, la version « audit » :</p>
     <div class="prompt">
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
@@ -517,6 +520,10 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     <p>Toutes les pistes ne sont pas bonnes, ni adaptées à votre classe. C'est vous qui décidez : gardez-en une ou deux, écartez le reste.</p>
     <div class="note"><label for="n5a">Notes : les pistes que je garde, celles que j'écarte</label><textarea id="n5a" data-key="n5a" data-label="Les pistes que je garde, celles que j'écarte" placeholder="Écrivez ici…"></textarea></div>
 
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c5-2"><span>J'ai trié les pistes : j'en garde une ou deux</span></label></li>
+    </ul>
+
     <h3>Mettez votre fiche à jour</h3>
     <p>Une fiche de contexte vit avec votre projet. Demandez à Claude de la mettre à jour avec ce que vous avez décidé aujourd'hui.</p>
     <div class="prompt">
@@ -524,8 +531,6 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande de mise à jour de la fiche, modifiable">Mets à jour ma fiche de contexte avec ce que nous avons fait et décidé aujourd'hui : où j'en suis, ce qui a marché, ce qui n'a pas marché, ce qu'il reste à faire. Redonne-la-moi en texte simple, sans la rallonger inutilement.</div>
     </div>
     <ul class="checks">
-      <li><label><input type="checkbox" data-key="c5-1"><span>J'ai posé la question fatidique</span></label></li>
-      <li><label><input type="checkbox" data-key="c5-2"><span>J'ai trié les pistes</span></label></li>
       <li><label><input type="checkbox" data-key="c5-3"><span>J'ai mis ma fiche à jour et je l'ai sauvegardée</span></label></li>
     </ul>
   </section>

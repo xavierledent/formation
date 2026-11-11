@@ -1,0 +1,5 @@
+# Documents du formateur (restent en local)
+*.pdf
+*.pptx
+*.docx
+~$*

@@ -180,6 +180,97 @@
     .cy { padding: 12px 12px 14px; }
     .cy span.t { font-size: 13.5px; }
   }
+
+  /* ===== Habillage : bandes, bandeaux de section, encadrés typés ===== */  :root {
+    --cream: #fff8e2; --cream-line: #f0dc9a;
+    --orange-bg: #fff1e6; --orange-line: #f5c8a3; --orange: #b4540f;
+    --green-bg: #e9f7f0; --green-line: #bfe5d1; --green: #13795b;
+    --blue-bg: #eaf1fd; --blue-line: #c9d8f7;
+    --on-navy: #c9d6f2; --on-navy-muted: #93a6d1;
+    --shadow: 0 10px 30px rgba(15, 42, 99, .08);
+  }
+  body { overflow-x: hidden; }
+
+  /* En-tête : bandeau bleu marine */
+  header.top { background: var(--navy); color: #fff; }
+  header.top h1 { color: #fff; }
+  header.top .hl { background: var(--yellow); color: var(--navy); padding: 0 .14em; border-radius: 8px; }
+  header.top .lead { color: var(--on-navy); }
+  header.top .kicker { color: var(--yellow); }
+  header.top .where { color: var(--on-navy-muted); }
+  header.top a.back { color: var(--yellow); }
+
+  /* Pied de page : bandeau bleu marine */
+  footer { background: var(--navy); color: var(--on-navy); padding: 28px 0 40px; }
+  footer .wrap { border-top: 0; padding-top: 0; }
+  footer a { color: var(--yellow); }
+  footer .sep { color: var(--on-navy-muted); }
+
+  /* Encadrés : une couleur et une icône par type */
+  .encart { position: relative; padding: 16px 20px 16px 54px; border: 1px solid var(--blue-line); background: var(--blue-bg); }
+  .encart::before {
+    content: ""; position: absolute; left: 18px; top: 16px; width: 22px; height: 22px;
+    background: var(--cobalt);
+    -webkit-mask: var(--ico) center / contain no-repeat; mask: var(--ico) center / contain no-repeat;
+    --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 11v6M12 7.5v.5'/%3E%3C/svg%3E");
+  }
+  .encart.astuce { background: var(--cream); border-color: var(--cream-line); }
+  .encart.astuce::before { background: #a0760a; --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }
+  .encart.attention { background: var(--orange-bg); border-color: var(--orange-line); }
+  .encart.attention::before { background: var(--orange); --ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3 2 20h20L12 3z'/%3E%3Cpath d='M12 10v4M12 17v.5'/%3E%3C/svg%3E"); }
+  .encart .hl { background: none; padding: 0; }
+  details.plus { background: var(--green-bg); border-color: var(--green-line); }
+  details.plus summary { color: var(--green); }
+  header.top { padding: 28px 0 34px; }
+  header.top .pill { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: var(--on-navy); }
+  header.top .pill b { color: var(--yellow); }
+  header.top .bar { background: rgba(255,255,255,.15); border-color: transparent; }
+  header.top .bar > span { background: var(--yellow); }
+  nav.sommaire { background: rgba(255,255,255,.96); box-shadow: 0 4px 16px rgba(15,42,99,.06); }
+  main { padding-top: 30px; }
+
+  /* Chaque section ouvre sur un bandeau de titre */
+  section.bloc { padding: 0 30px 26px; border: 0; box-shadow: var(--shadow); overflow: hidden; }
+  section.bloc .bloc-head { margin: 0 -30px 0; padding: 22px 30px; background: var(--navy); }
+  section.bloc .bloc-head h2 { color: #fff; }
+  section.bloc .bloc-head .big-num { color: var(--yellow); }
+  section.bloc > p.objectif { max-width: none; }
+  section.bloc .objectif { margin: 0 -30px 8px; padding: 14px 30px; background: var(--bg); color: var(--navy); }
+  #accueil .bloc-head + .cycle { margin-top: 24px; }
+
+  /* Sous-parties séparées par un trait */
+  section.bloc h3 { margin: 34px 0 12px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 12.5px; }
+  section.bloc .objectif + h3, section.bloc .objectif + .encart + h3 { border-top: 0; padding-top: 0; }
+
+  /* Zones de notes : « à vous d'écrire » */
+  .note label { display: flex; align-items: center; gap: 8px; color: #8a6508; }
+  .note label::before {
+    content: ""; width: 16px; height: 16px; background: #a0760a; flex: none;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h4L19 9l-4-4L4 16v4z'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h4L19 9l-4-4L4 16v4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .note textarea { background: #fffdf4; border: 1.5px dashed var(--cream-line); }
+  .note textarea:focus { background: #fff; border-style: solid; border-color: #d9b94a; }
+
+  .actions { border: 0; box-shadow: var(--shadow); }
+  @media (max-width: 520px) {
+    section.bloc { padding: 0 16px 18px; }
+    section.bloc .bloc-head, section.bloc .objectif { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+  }
+
+  /* En-tête clair et compact */
+  header.top { background: var(--bg); color: var(--body); padding: 22px 0 26px; }
+  header.top h1 { color: var(--navy); font-size: clamp(2rem, 6vw, 2.9rem); margin: 14px 0 10px; }
+  header.top .lead { color: var(--body); font-size: 1rem; max-width: 70ch; }
+  header.top .kicker { color: var(--cobalt); }
+  header.top .where { color: var(--muted); }
+  header.top a.back { color: var(--cobalt); margin-bottom: 8px; }
+  header.top .pills { margin-top: 14px; }
+  header.top .pill { background: #fff; border-color: var(--line); color: var(--body); }
+  header.top .pill b { color: var(--cobalt); }
+  header.top .bar { background: #fff; border-color: var(--line); }
+  header.top .bar > span { background: var(--cobalt); }
+  nav.sommaire { border-top: 1px solid var(--line); }
 </style>
 </head>
 <body>
@@ -228,7 +319,7 @@
       <div class="loop" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9M20 4v4h-4"/></svg></div>
     </div>
     <p>Hier, vous avez fait un premier tour. Aujourd'hui, vous en faites un second, avec un atout de plus : une <strong>fiche de contexte</strong>. Plus besoin de tout réexpliquer à Claude : vous lui donnez la fiche, et il sait où vous en êtes.</p>
-    <div class="encart">
+    <div class="encart astuce">
       <p><strong><span class="hl">Une idée vous semble trop grande ?</span></strong> Ne la rangez pas : demandez à Claude comment la réaliser. Il vous dira aussi ce qu'un simple fichier HTML ne peut pas faire.</p>
     </div>
     <div class="encart">
@@ -269,7 +360,7 @@
 
     <h3>Ce que c'est</h3>
     <p>Un petit texte que vous donnez à Claude au début d'une conversation. Il y trouve tout ce qu'il doit savoir : qui vous êtes, vos élèves, votre façon de faire, l'outil, où vous en êtes. C'est la mémoire que vous lui redonnez à chaque nouveau départ.</p>
-    <div class="encart">
+    <div class="encart astuce">
       <p><strong><span class="hl">Commencez court.</span></strong> Une demi-page suffit. Elle grandira avec votre projet : à chaque tour d'amélioration, vous ajoutez ou vous corrigez une ligne.</p>
     </div>
 
@@ -306,7 +397,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour écrire la fiche, modifiable">Je voudrais une fiche de contexte courte (une demi-page) pour mon projet, que je te redonnerai au début de chaque conversation. Pose-moi une question à la fois pour la construire : qui je suis, mes élèves, mon objectif, ma façon de faire, le format de l'outil, où j'en suis. Quand tu as tout, écris la fiche en texte simple que je pourrai copier.</div>
     </div>
     <div class="note"><label for="n2a">Ma fiche de contexte (brouillon)</label><textarea id="n2a" data-key="n2a" data-label="Ma fiche de contexte (brouillon)" style="min-height:220px" placeholder="Collez ou écrivez votre fiche ici…"></textarea></div>
-    <div class="encart">
+    <div class="encart attention">
       <p><strong>Attention :</strong> ni nom d'élève, ni donnée personnelle dans la fiche. Elle voyage de conversation en conversation.</p>
     </div>
 
@@ -348,7 +439,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     </div>
     <p class="hint">Vous continuez dans la conversation où la fiche et vos fichiers sont déjà ? Retirez simplement la première phrase de la demande.</p>
 
-    <details>
+    <details class="plus">
       <summary>Vous avancez vite ? Pour aller plus loin</summary>
       <ul>
         <li>Une explication plus poussée, ou un exemple résolu, quand l'élève se trompe deux fois.</li>
@@ -396,10 +487,10 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <li><label><input type="checkbox" data-key="c4-7"><span>Mon voisin a reçu mon fichier</span></label></li>
       <li><label><input type="checkbox" data-key="c4-8"><span>Il l'a ouvert sur son appareil et il fonctionne</span></label></li>
     </ul>
-    <div class="encart">
+    <div class="encart astuce">
       <p>Dans Google Drive, un fichier HTML ne s'affiche pas comme une page : il faut le télécharger, puis l'ouvrir. Certaines messageries bloquent les fichiers HTML en pièce jointe : si c'est le cas, passez par le Drive ou la plateforme de l'école. Vos élèves n'ont besoin d'aucun compte : ils ouvrent simplement le fichier.</p>
     </div>
-    <div class="encart">
+    <div class="encart attention">
       <p><strong><span class="hl">Avant de partager.</span></strong> Aucune donnée d'élève dans le fichier : ni nom, ni cote, ni photo.</p>
     </div>
     <div class="note"><label for="n4">Notes : ce que mon voisin a trouvé chez moi</label><textarea id="n4" data-key="n4" data-label="Ce que mon voisin a trouvé chez moi" placeholder="Écrivez ici…"></textarea></div>

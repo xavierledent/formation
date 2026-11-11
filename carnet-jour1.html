@@ -195,8 +195,8 @@
 <nav class="sommaire" aria-label="Sommaire">
   <div class="wrap" role="tablist" aria-label="Parties du carnet">
     <button type="button" class="tab" role="tab" data-target="accueil" id="tab-accueil" aria-controls="accueil">Accueil</button>
-    <button type="button" class="tab" role="tab" data-target="connecter" id="tab-connecter" aria-controls="connecter">1 · Se connecter</button>
-    <button type="button" class="tab" role="tab" data-target="cible" id="tab-cible" aria-controls="cible">2 · La cible</button>
+    <button type="button" class="tab" role="tab" data-target="cible" id="tab-cible" aria-controls="cible">1 · La cible</button>
+    <button type="button" class="tab" role="tab" data-target="connecter" id="tab-connecter" aria-controls="connecter">2 · Se connecter</button>
     <button type="button" class="tab" role="tab" data-target="preparer" id="tab-preparer" aria-controls="preparer">3 · Préparer</button>
     <button type="button" class="tab" role="tab" data-target="construire" id="tab-construire" aria-controls="construire">4 · Construire</button>
     <button type="button" class="tab" role="tab" data-target="tester" id="tab-tester" aria-controls="tester">5 · Tester</button>
@@ -231,21 +231,9 @@
     </div>
   </section>
 
-  <!-- 1. SE CONNECTER -->
-  <section class="bloc" id="connecter" data-title="1 · Se connecter">
-    <div class="bloc-head"><span class="big-num">1</span><h2>Se connecter</h2><span class="time">9h00</span></div>
-    <p class="objectif">Objectif : être prêt à travailler avec Claude.</p>
-    <ul class="checks">
-      <li><label><input type="checkbox" data-key="c1-1"><span>J'ai ouvert mon compte Claude <span class="todo">à adapter à la réalité (ouverture du compte)</span></span></label></li>
-      <li><label><input type="checkbox" data-key="c1-2"><span>Je vois la zone où écrire mon message</span></label></li>
-      <li><label><input type="checkbox" data-key="c1-3"><span>J'ai choisi le modèle conseillé pour commencer : <strong>Sonnet</strong>, effort <strong>moyen</strong> <span class="todo">à confirmer avant la formation</span></span></label></li>
-    </ul>
-    <div class="note"><label for="n1">Notes : mes questions</label><textarea id="n1" data-key="n1" data-label="Mes questions" placeholder="Écrivez ici…"></textarea></div>
-  </section>
-
-  <!-- 2. LA CIBLE -->
-  <section class="bloc" id="cible" data-title="2 · La cible">
-    <div class="bloc-head"><span class="big-num">2</span><h2>La cible</h2><span class="time">9h30</span></div>
+  <!-- 1. LA CIBLE -->
+  <section class="bloc" id="cible" data-title="1 · La cible">
+    <div class="bloc-head"><span class="big-num">1</span><h2>La cible</h2></div>
     <p class="objectif">Objectif : savoir ce que je vais fabriquer.</p>
     <div class="note"><label for="n2a">Pendant les démos : qu'est-ce qui m'a donné des idées ?</label><textarea id="n2a" data-key="n2a" data-label="Pendant les démos, ce qui m'a donné des idées" placeholder="Écrivez ici…"></textarea></div>
 
@@ -266,9 +254,21 @@
     </dl>
   </section>
 
+  <!-- 2. SE CONNECTER -->
+  <section class="bloc" id="connecter" data-title="2 · Se connecter">
+    <div class="bloc-head"><span class="big-num">2</span><h2>Se connecter</h2></div>
+    <p class="objectif">Objectif : être prêt à travailler avec Claude, avec le modèle et l'effort choisis.</p>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c1-1"><span>J'ai ouvert mon compte Claude <span class="todo">à adapter à la réalité (ouverture du compte)</span></span></label></li>
+      <li><label><input type="checkbox" data-key="c1-2"><span>Je vois la zone où écrire mon message</span></label></li>
+      <li><label><input type="checkbox" data-key="c1-3"><span>J'ai choisi le modèle conseillé pour commencer : <strong>Sonnet</strong>, effort <strong>moyen</strong> <span class="todo">à confirmer avant la formation</span></span></label></li>
+    </ul>
+    <div class="note"><label for="n1">Notes : mes questions</label><textarea id="n1" data-key="n1" data-label="Mes questions" placeholder="Écrivez ici…"></textarea></div>
+  </section>
+
   <!-- 3. PRÉPARER -->
   <section class="bloc" id="preparer" data-title="3 · Préparer">
-    <div class="bloc-head"><span class="big-num">3</span><h2>Préparer</h2><span class="time">10h15</span></div>
+    <div class="bloc-head"><span class="big-num">3</span><h2>Préparer</h2></div>
     <p class="objectif">Objectif : écrire, avec l'IA, un brief clair de l'outil à fabriquer.</p>
     <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Joignez votre chapitre plutôt que le décrire, dites ce que vous voulez, et laissez Claude vous poser des questions avant de construire.</p></div>
 
@@ -304,7 +304,7 @@ Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin p
 
   <!-- 4. CONSTRUIRE -->
   <section class="bloc" id="construire" data-title="4 · Construire">
-    <div class="bloc-head"><span class="big-num">4</span><h2>Construire</h2><span class="time">11h00</span></div>
+    <div class="bloc-head"><span class="big-num">4</span><h2>Construire</h2></div>
     <p class="objectif">Objectif : avoir un premier fichier HTML qui s'ouvre.</p>
 
     <h3>Demande n°2 : à copier quand vous êtes prêt</h3>
@@ -340,7 +340,7 @@ Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin p
 
   <!-- 5. TESTER -->
   <section class="bloc" id="tester" data-title="5 · Tester">
-    <div class="bloc-head"><span class="big-num">5</span><h2>Tester</h2><span class="time">13h20</span></div>
+    <div class="bloc-head"><span class="big-num">5</span><h2>Tester</h2></div>
     <p class="objectif">Objectif : trouver les problèmes avant vos élèves.</p>
     <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Trompez-vous exprès, vérifiez vous-même les maths, les sciences et les corrections, et laissez un regard neuf (votre voisin) trouver ce que vous ne voyez plus.</p></div>
 
@@ -373,7 +373,7 @@ Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin p
 
   <!-- 6. AMÉLIORER -->
   <section class="bloc" id="ameliorer" data-title="6 · Améliorer">
-    <div class="bloc-head"><span class="big-num">6</span><h2>Améliorer</h2><span class="time">14h30</span></div>
+    <div class="bloc-head"><span class="big-num">6</span><h2>Améliorer</h2></div>
     <p class="objectif">Objectif : un outil meilleur, une modification à la fois.</p>
     <p><strong>Règle : une modification à la fois, puis on retest.</strong> Chaque fois, Claude vous donne un nouveau fichier : v2, v3…</p>
 
@@ -412,7 +412,7 @@ Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin p
 
   <!-- 7. BILAN -->
   <section class="bloc" id="bilan" data-title="7 · Bilan">
-    <div class="bloc-head"><span class="big-num">7</span><h2>Bilan</h2><span class="time">15h30</span></div>
+    <div class="bloc-head"><span class="big-num">7</span><h2>Bilan</h2></div>
     <p class="objectif">Objectif : préparer demain.</p>
     <p>Au fil de la journée, vous avez sans doute dû répéter les mêmes informations à l'IA (votre niveau, votre façon de faire, votre vocabulaire…). Notez-les : demain, elles deviendront votre fiche de contexte.</p>
     <div class="note"><label for="n7a">Notes : ce que j'ai dû réexpliquer à l'IA</label><textarea id="n7a" data-key="n7a" data-label="Ce que j'ai dû réexpliquer à l'IA" placeholder="Écrivez ici…"></textarea></div>

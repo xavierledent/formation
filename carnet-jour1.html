@@ -238,7 +238,7 @@
     <div class="note"><label for="n2a">Pendant les démos : qu'est-ce qui m'a donné des idées ?</label><textarea id="n2a" data-key="n2a" data-label="Pendant les démos, ce qui m'a donné des idées" placeholder="Écrivez ici…"></textarea></div>
 
     <h3>Ma question du jour</h3>
-    <p>Quel chapitre, ou quel exercice, me ferait vraiment gagner du temps ou apporter quelque chose à mes élèves ?</p>
+    <p>Quelle partie de chapitre, ou quel exercice, me ferait vraiment gagner du temps ou apporter quelque chose à mes élèves ?</p>
     <div class="note"><label for="n2b">Notes : ma réponse</label><textarea id="n2b" data-key="n2b" data-label="Ma réponse" placeholder="Écrivez ici…"></textarea></div>
 
     <h3>Quatre mots à connaître</h3>
@@ -248,7 +248,7 @@
       <dt>Niveau d'effort</dt>
       <dd>Plus l'effort est élevé, plus Claude cherche d'informations avant de construire et vérifie son résultat avant de vous le rendre, mais plus c'est lent et gourmand en quota. Cela ne le rend pas infaillible : le test reste de votre côté. Pour commencer : effort <strong>moyen</strong>.</dd>
       <dt>Fenêtre de contexte</dt>
-      <dd>La « table de travail » de Claude : tout ce qui est dans la conversation (vos messages, ses réponses, les fichiers joints) est sous ses yeux ; ce qui n'y est pas, il ne le voit pas. Cette table a une taille limitée. <strong>Plus elle se remplit, plus chaque message consomme de quota, et moins le travail est bon</strong> : Claude finit par perdre le fil des débuts de la conversation. D'où deux habitudes : joindre votre chapitre plutôt que le décrire, et ouvrir une nouvelle conversation quand la vôtre devient très longue, en lui redonnant l'essentiel (c'est le rôle de la fiche de contexte, demain).</dd>
+      <dd>La « table de travail » de Claude : tout ce qui est dans la conversation (vos messages, ses réponses, les fichiers joints) est sous ses yeux ; ce qui n'y est pas, il ne le voit pas. Cette table a une taille limitée. <strong>Plus elle se remplit, plus chaque message consomme de quota, et moins le travail est bon</strong> : Claude finit par perdre le fil des débuts de la conversation. D'où deux habitudes : joindre la partie de chapitre concernée plutôt que la décrire (un extrait précis vaut mieux que tout le chapitre), et ouvrir une nouvelle conversation quand la vôtre devient très longue, en lui redonnant l'essentiel (c'est le rôle de la fiche de contexte, demain).</dd>
       <dt>Fichier HTML</dt>
       <dd>Une page web enregistrée sur votre ordinateur, qui s'ouvre dans n'importe quel navigateur, sans rien installer. Elle contient le texte (HTML), la mise en forme (CSS) et l'interactivité (JavaScript) : Claude écrit tout seul, vous n'avez pas à le lire.</dd>
     </dl>
@@ -270,25 +270,27 @@
   <section class="bloc" id="preparer" data-title="3 · Préparer">
     <div class="bloc-head"><span class="big-num">3</span><h2>Préparer</h2></div>
     <p class="objectif">Objectif : écrire, avec l'IA, un brief clair de l'outil à fabriquer.</p>
-    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Joignez votre chapitre plutôt que le décrire, dites ce que vous voulez, et laissez Claude vous poser des questions avant de construire.</p></div>
+    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Choisissez une partie du chapitre (une notion, une section) et joignez uniquement celle-ci plutôt que de la décrire. Si vous joignez plus, dites précisément laquelle. Dites ce que vous voulez, et laissez Claude vous poser des questions avant de construire.</p></div>
 
     <h3>Votre checklist avant de demander</h3>
     <ul class="checks">
-      <li><label><input type="checkbox" data-key="c3-1"><span>J'ai choisi un chapitre (le document lui-même, en version numérique)</span></label></li>
+      <li><label><input type="checkbox" data-key="c3-1"><span>J'ai choisi la partie du chapitre à travailler (une notion, une section) : je la joins seule, ou je dis précisément laquelle</span></label></li>
       <li><label><input type="checkbox" data-key="c3-2"><span>Je sais pour quels élèves (niveau, classe)</span></label></li>
       <li><label><input type="checkbox" data-key="c3-3"><span>Je sais ce que je veux : m'entraîner, réviser, découvrir une notion…</span></label></li>
       <li><label><input type="checkbox" data-key="c3-4"><span>Je veux un seul fichier HTML à télécharger</span></label></li>
       <li><label><input type="checkbox" data-key="c3-5"><span>Je n'ai pas de données d'élèves dans mes documents (noms, cotes, photos)</span></label></li>
     </ul>
 
-    <h3>Demande n°1 : à copier, puis joindre votre chapitre</h3>
+    <h3>Demande n°1 : à copier, puis joindre la partie choisie</h3>
     <div class="prompt">
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
-      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande n°1, modifiable">Voici mon chapitre en pièce jointe. Je voudrais en faire un exercice interactif pour mes élèves, afin de <mark>[m'entraîner / réviser / découvrir : choisissez]</mark>.
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande n°1, modifiable">Voici en pièce jointe <mark>[la partie de mon chapitre que je veux travailler]</mark>. Je voudrais en faire un exercice interactif pour mes élèves, afin de <mark>[m'entraîner / réviser / découvrir : choisissez]</mark>.
 Le résultat doit être un seul fichier HTML (tout dans le même fichier, mise en forme et interactivité comprises) que je pourrai télécharger et ouvrir dans mon navigateur, sans rien installer.
-Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin pour bien comprendre mon objectif, quelques-unes à la fois.</div>
+Avant de construire quoi que ce soit, pose-moi les questions dont tu as besoin pour bien comprendre mon objectif, quelques-unes à la fois.
+Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom de la partie : titre, section ou pages]</mark>.</div>
     </div>
     <p class="hint">Vous pouvez modifier le texte directement avant de le copier.</p>
+    <div class="encart"><p><strong><span class="hl">Une partie, pas tout le chapitre.</span></strong> Le mieux est de joindre <strong>seulement la partie que vous voulez travailler</strong> (un extrait, quelques pages) : Claude est plus précis, et la table de travail ne se remplit pas pour rien. Si vous joignez le chapitre entier, dites-lui exactement sur quelle partie vous travaillez.</p></div>
 
     <p>Répondez à ses questions. Ne cherchez pas la réponse parfaite : dites ce que vous pensez, et dites-lui quand vous ne savez pas. Vous pouvez aussi lui demander des idées.</p>
     <div class="note"><label for="n3">Notes : les questions de l'IA et mes réponses</label><textarea id="n3" data-key="n3" data-label="Les questions de l'IA et mes réponses" placeholder="Écrivez ici…"></textarea></div>

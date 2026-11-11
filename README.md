@@ -2,7 +2,7 @@
 
 Formation de deux jours pour les enseignants de mathématiques et de sciences du secondaire. Chaque participant y crée avec Claude un outil pédagogique interactif à partir de son propre cours, puis le teste et l'améliore. Aucune compétence en programmation n'est demandée et rien n'est à installer.
 
-Ce dépôt contient le site web que les participants suivent pendant la formation.
+Ce dépôt contient le site web que les participants suivent pendant la formation, en ligne à l'adresse **https://xavierledent.github.io/formation/**.
 
 ## La méthode
 
@@ -40,7 +40,7 @@ La formation repose sur un cycle en quatre temps, que l'on parcourt plusieurs fo
 Le site est entièrement statique : chaque page est un fichier HTML autonome (polices et styles intégrés), sans dépendance ni étape de compilation.
 
 - **En local** : ouvrir `index.html` dans un navigateur.
-- **En ligne** : publier le dépôt avec GitHub Pages (*Settings → Pages → Deploy from a branch → `main` / root*). Le site est alors accessible à l'adresse `https://<utilisateur>.github.io/<depot>/`.
+- **En ligne** : le site est publié avec GitHub Pages à l'adresse https://xavierledent.github.io/formation/. Chaque envoi sur la branche `main` met le site à jour en une ou deux minutes.
 
 Les notes des participants sont enregistrées dans le stockage local de leur navigateur. Elles ne quittent pas leur appareil ; le bouton « Exporter mes notes », en bas de chaque carnet, permet de les sauvegarder ou de les transférer vers un autre appareil.
 

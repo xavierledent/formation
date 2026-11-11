@@ -201,8 +201,8 @@
 <nav class="sommaire" aria-label="Sommaire">
   <div class="wrap" role="tablist" aria-label="Parties du carnet">
     <button type="button" class="tab" role="tab" data-target="accueil" id="tab-accueil" aria-controls="accueil">Accueil</button>
-    <button type="button" class="tab" role="tab" data-target="cible" id="tab-cible" aria-controls="cible">1 · La cible</button>
-    <button type="button" class="tab" role="tab" data-target="connecter" id="tab-connecter" aria-controls="connecter">2 · Se connecter</button>
+    <button type="button" class="tab" role="tab" data-target="connecter" id="tab-connecter" aria-controls="connecter">1 · Se connecter</button>
+    <button type="button" class="tab" role="tab" data-target="cible" id="tab-cible" aria-controls="cible">2 · La cible</button>
     <button type="button" class="tab" role="tab" data-target="preparer" id="tab-preparer" aria-controls="preparer">3 · Préparer</button>
     <button type="button" class="tab" role="tab" data-target="construire" id="tab-construire" aria-controls="construire">4 · Construire</button>
     <button type="button" class="tab" role="tab" data-target="tester" id="tab-tester" aria-controls="tester">5 · Tester</button>
@@ -233,13 +233,31 @@
       <p><strong><span class="hl">Avant de commencer.</span></strong> Ici, on teste. Rien n'est grave si on se trompe : on apprend beaucoup de ses erreurs, et un outil raté se recommence en deux minutes.</p>
     </div>
     <div class="encart">
-      <p><strong><span class="hl">Comment ça marche.</span></strong> Le formateur présente, puis annonce « À vous de jouer » : ouvrez la section indiquée et suivez-la à votre rythme. Chaque section se suffit à elle-même : un objectif, des étapes, des demandes à copier et des cases à cocher. Bloqué ? Voyez « En cas de blocage ».</p>
+      <p><strong><span class="hl">Comment ça marche.</span></strong> En arrivant, faites la section 1 : vous connecter. Ensuite, la journée suit deux grands temps, le matin et l'après-midi. Le formateur présente d'un bloc, puis annonce « À vous de jouer » : vous enchaînez alors plusieurs sections, à votre rythme. Chaque section se suffit à elle-même : un objectif, des étapes, des demandes à copier et des cases à cocher. Bloqué ? Voyez « En cas de blocage ».</p>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c0-1"><span><strong>Ce matin</strong> : sections 2 à 4, jusqu'à un premier fichier qui s'ouvre.</span></label></li>
+      <li><label><input type="checkbox" data-key="c0-2"><span><strong>Cet après-midi</strong> : sections 5 à 7, pour tester, améliorer et faire le bilan.</span></label></li>
+    </ul>
   </section>
 
-  <!-- 1. LA CIBLE -->
-  <section class="bloc" id="cible" data-title="1 · La cible">
-    <div class="bloc-head"><span class="big-num">1</span><h2>La cible</h2></div>
+  <!-- 1. SE CONNECTER -->
+  <section class="bloc" id="connecter" data-title="1 · Se connecter">
+    <div class="bloc-head"><span class="big-num">1</span><h2>Se connecter</h2></div>
+    <p class="objectif">Objectif : être prêt à travailler avec Claude, dès votre arrivée.</p>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c1-1"><span>J'ai ouvert mon compte Claude</span></label></li>
+      <li><label><input type="checkbox" data-key="c1-2"><span>Je vois la zone où écrire mon message</span></label></li>
+      <li><label><input type="checkbox" data-key="c1-3"><span>J'ai choisi le modèle conseillé pour commencer : <strong>Sonnet</strong>, effort <strong>moyen</strong> (le formateur vous montre où)</span></label></li>
+      <li><label><input type="checkbox" data-key="c1-4"><span>J'ai mon cours en version numérique sur cet ordinateur</span></label></li>
+    </ul>
+    <p>Ça ne marche pas ? Pas d'inquiétude : signalez-le au formateur, il passe vous voir pendant que la présentation démarre.</p>
+    <div class="note"><label for="n1">Notes : mes questions</label><textarea id="n1" data-key="n1" data-label="Mes questions" placeholder="Écrivez ici…"></textarea></div>
+  </section>
+
+  <!-- 2. LA CIBLE -->
+  <section class="bloc" id="cible" data-title="2 · La cible">
+    <div class="bloc-head"><span class="big-num">2</span><h2>La cible</h2></div>
     <p class="objectif">Objectif : savoir ce que je vais fabriquer.</p>
     <div class="note"><label for="n2a">Pendant les démos : qu'est-ce qui m'a donné des idées ?</label><textarea id="n2a" data-key="n2a" data-label="Pendant les démos, ce qui m'a donné des idées" placeholder="Écrivez ici…"></textarea></div>
 
@@ -258,18 +276,6 @@
       <dt>Fichier HTML</dt>
       <dd>Une page web enregistrée sur votre ordinateur, qui s'ouvre dans n'importe quel navigateur, sans rien installer. Elle contient le texte (HTML), la mise en forme (CSS) et l'interactivité (JavaScript) : Claude écrit tout seul, vous n'avez pas à le lire.</dd>
     </dl>
-  </section>
-
-  <!-- 2. SE CONNECTER -->
-  <section class="bloc" id="connecter" data-title="2 · Se connecter">
-    <div class="bloc-head"><span class="big-num">2</span><h2>Se connecter</h2></div>
-    <p class="objectif">Objectif : être prêt à travailler avec Claude, avec le modèle et l'effort choisis.</p>
-    <ul class="checks">
-      <li><label><input type="checkbox" data-key="c1-1"><span>J'ai ouvert mon compte Claude <span class="todo">à adapter à la réalité (ouverture du compte)</span></span></label></li>
-      <li><label><input type="checkbox" data-key="c1-2"><span>Je vois la zone où écrire mon message</span></label></li>
-      <li><label><input type="checkbox" data-key="c1-3"><span>J'ai choisi le modèle conseillé pour commencer : <strong>Sonnet</strong>, effort <strong>moyen</strong> <span class="todo">à confirmer avant la formation</span></span></label></li>
-    </ul>
-    <div class="note"><label for="n1">Notes : mes questions</label><textarea id="n1" data-key="n1" data-label="Mes questions" placeholder="Écrivez ici…"></textarea></div>
   </section>
 
   <!-- 3. PRÉPARER -->
@@ -314,6 +320,7 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
   <section class="bloc" id="construire" data-title="4 · Construire">
     <div class="bloc-head"><span class="big-num">4</span><h2>Construire</h2></div>
     <p class="objectif">Objectif : avoir un premier fichier HTML qui s'ouvre.</p>
+    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Demandez un fichier HTML à télécharger, pas du code dans le message. Donnez un numéro à chaque version (v1, v2, v3…) : si une modification gâte votre outil, vous retrouvez la version qui marchait.</p></div>
 
     <h3>Demande n°2 : à copier quand vous êtes prêt</h3>
     <div class="prompt">
@@ -339,7 +346,7 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
       <p>Décrivez à Claude ce que vous voyez (ou joignez une capture d'écran) :</p>
       <div class="prompt">
         <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
-        <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande de dépannage, modifiable">Le fichier ne s'ouvre pas comme prévu. Voici ce que je vois : <mark>[décrivez ou joignez une capture]</mark>. Corrige et redonne-moi un fichier à télécharger (v2).</div>
+        <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande de dépannage, modifiable">Le fichier ne s'ouvre pas comme prévu. Voici ce que je vois : <mark>[décrivez ou joignez une capture]</mark>. Corrige et redonne-moi un fichier à télécharger, avec le numéro de version suivant.</div>
       </div>
     </details>
 
@@ -373,7 +380,7 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
     </div>
 
     <h3>Avec votre voisin</h3>
-    <p>Échangez vos fichiers. Chacun teste l'outil de l'autre, comme un élève qui n'a rien suivi. Notez ce que votre voisin a trouvé chez vous.</p>
+    <p>Quand votre voisin est prêt lui aussi, échangez vos places (ou tournez votre ordinateur vers lui). Chacun teste l'outil de l'autre, comme un élève qui n'a rien suivi. Notez ce que votre voisin a trouvé chez vous. Votre voisin n'est pas encore prêt ? Passez à la section 6 et revenez ici plus tard.</p>
     <div class="note"><label for="n5">Notes : ce que mon voisin a trouvé</label><textarea id="n5" data-key="n5" data-label="Ce que mon voisin a trouvé" placeholder="Écrivez ici…"></textarea></div>
 
     <div class="encart"><p><span class="hl">On apprend beaucoup de ses erreurs</span> : un problème trouvé aujourd'hui, c'est un problème de moins en classe.</p></div>
@@ -383,16 +390,17 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
   <section class="bloc" id="ameliorer" data-title="6 · Améliorer">
     <div class="bloc-head"><span class="big-num">6</span><h2>Améliorer</h2></div>
     <p class="objectif">Objectif : un outil meilleur, une modification à la fois.</p>
-    <p><strong>Règle : une modification à la fois, puis on retest.</strong> Chaque fois, Claude vous donne un nouveau fichier : v2, v3…</p>
+    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Corriger, ajouter, demander des idées, soigner l'aspect : quatre façons d'améliorer votre outil. Et un outil qui fonctionne n'est pas encore un outil fini.</p></div>
+    <p><strong>Règle : une modification à la fois, puis on retest.</strong> Chaque fois, Claude vous donne un nouveau fichier avec le numéro de version suivant : v2, v3… Dans les demandes ci-dessous, <mark>[n]</mark> est ce numéro.</p>
 
     <h3>Demandes types : à copier et adapter</h3>
     <div class="prompt">
       <div class="prompt-bar"><span>Corriger</span><button class="btn-copy" type="button">Copier</button></div>
-      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour corriger, modifiable">J'ai testé l'exercice et voici ce que j'ai constaté : <mark>[vos problèmes]</mark>. Corrige uniquement ces points et redonne-moi un fichier à télécharger (v2).</div>
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour corriger, modifiable">J'ai testé l'exercice et voici ce que j'ai constaté : <mark>[vos problèmes]</mark>. Corrige uniquement ces points et redonne-moi un fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
     <div class="prompt">
       <div class="prompt-bar"><span>Ajouter</span><button class="btn-copy" type="button">Copier</button></div>
-      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour ajouter, modifiable">Ajoute : <mark>[votre idée]</mark>. Ne change rien d'autre. Fichier à télécharger (v3).</div>
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour ajouter, modifiable">Ajoute : <mark>[votre idée]</mark>. Ne change rien d'autre. Fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
     <div class="prompt">
       <div class="prompt-bar"><span>Demander des idées</span><button class="btn-copy" type="button">Copier</button></div>
@@ -401,7 +409,7 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
 
     <div class="prompt">
       <div class="prompt-bar"><span>Soigner l'aspect</span><button class="btn-copy" type="button">Copier</button></div>
-      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour soigner l'aspect, modifiable">Rends cet outil plus agréable à regarder et à utiliser pour un élève de <mark>[âge]</mark> ans : lisibilité, espacement, taille des boutons, couleurs. Ne change pas le contenu ni les corrections. Fichier à télécharger (v4).</div>
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour soigner l'aspect, modifiable">Rends cet outil plus agréable à regarder et à utiliser pour un élève de <mark>[âge]</mark> ans : lisibilité, espacement, taille des boutons, couleurs. Ne change pas le contenu ni les corrections. Fichier à télécharger (v<mark>[n]</mark>).</div>
     </div>
 
     <div class="encart">
@@ -416,6 +424,17 @@ Si le document contient plus que cette partie, ne travaille que sur : <mark>[nom
       <li><label><input type="checkbox" data-key="c6-4"><span>J'ai demandé d'améliorer l'aspect ou la facilité d'utilisation</span></label></li>
       <li><label><input type="checkbox" data-key="c6-3"><span>J'ai retesté</span></label></li>
     </ul>
+
+    <details>
+      <summary>Vous avancez vite ? Pour aller plus loin</summary>
+      <ul>
+        <li>Un retour pour l'élève qui explique l'erreur, pas seulement « faux ».</li>
+        <li>Un indice à demander avant de voir la réponse.</li>
+        <li>Des questions tirées au hasard, pour pouvoir refaire l'exercice.</li>
+        <li>Un score à la fin, avec un message d'encouragement.</li>
+      </ul>
+      <p>Une idée à la fois, un nouveau numéro de version à chaque fois. Ou commencez déjà la section 7 : vos notes du bilan serviront demain matin.</p>
+    </details>
   </section>
 
   <!-- 7. BILAN -->

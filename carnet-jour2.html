@@ -232,14 +232,18 @@
       <p><strong><span class="hl">Rien n'est impossible.</span></strong> Seule votre imagination est la limite. Si une idée vous semble trop grande, ne la rangez pas : demandez à Claude comment la réaliser.</p>
     </div>
     <div class="encart">
-      <p><strong><span class="hl">Comment ça marche.</span></strong> Comme hier, le formateur présente, puis annonce « À vous de jouer » : ouvrez la section indiquée et suivez-la à votre rythme. Chaque section se suffit à elle-même. Bloqué ? Voyez « En cas de blocage ».</p>
+      <p><strong><span class="hl">Comment ça marche.</span></strong> En arrivant, faites la section 1. Ensuite, comme hier, deux grands temps : le formateur présente d'un bloc, puis annonce « À vous de jouer » et vous enchaînez plusieurs sections, à votre rythme. Chaque section se suffit à elle-même. Bloqué ? Voyez « En cas de blocage ».</p>
     </div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c0-1"><span><strong>Ce matin</strong> : sections 2 et 3, votre fiche de contexte puis un outil qui avance.</span></label></li>
+      <li><label><input type="checkbox" data-key="c0-2"><span><strong>Cet après-midi</strong> : sections 4 et 5, puis la clôture tous ensemble.</span></label></li>
+    </ul>
   </section>
 
   <!-- 1. RETOUR -->
   <section class="bloc" id="retour" data-title="1 · Retour">
     <div class="bloc-head"><span class="big-num">1</span><h2>Retour</h2></div>
-    <p class="objectif">Objectif : repartir de là où vous en étiez hier.</p>
+    <p class="objectif">Objectif : repartir de là où vous en étiez hier. À faire en arrivant, avant que la présentation commence.</p>
     <ul class="checks">
       <li><label><input type="checkbox" data-key="c1-1"><span>J'ai retrouvé mon dernier fichier d'hier (le numéro de version le plus élevé)</span></label></li>
       <li><label><input type="checkbox" data-key="c1-2"><span>Il s'ouvre toujours dans mon navigateur</span></label></li>
@@ -254,7 +258,7 @@
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande de reprise, modifiable">Voici un exercice en pièce jointe (fichier HTML). Lis-le et dis-moi, en deux phrases, ce que tu comprends : pour quels élèves, pour quel objectif. Ne modifie rien.</div>
     </div>
-    <p>Que sait-il de votre classe, de votre façon de faire, de ce qui avait déjà été essayé ? Presque rien : cette conversation est une table de travail vide. C'est exactement le problème que la fiche de contexte va résoudre.</p>
+    <p>Que sait-il de votre classe, de votre façon de faire, de ce qui avait déjà été essayé ? Presque rien : cette conversation est une table de travail vide. C'est exactement le problème que la fiche de contexte va résoudre. Gardez sa réponse sous la main : on en parle ensemble au début de la présentation.</p>
     <div class="note"><label for="n1c">Notes : ce qu'il a compris, et ce qu'il ne pouvait pas savoir</label><textarea id="n1c" data-key="n1c" data-label="Ce qu'il a compris, et ce qu'il ne pouvait pas savoir" placeholder="Écrivez ici…"></textarea></div>
   </section>
 
@@ -323,11 +327,11 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
   <section class="bloc" id="construire" data-title="3 · Construire">
     <div class="bloc-head"><span class="big-num">3</span><h2>Construire</h2></div>
     <p class="objectif">Objectif : un outil plus complet, ou un deuxième outil cohérent avec le premier.</p>
-    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Donnez la fiche de contexte à Claude avant toute demande, puis décrivez ce que vous voulez ajouter ou construire.</p></div>
+    <div class="encart"><p><strong><span class="hl">Rappel de la présentation.</span></strong> Claude doit avoir la fiche de contexte sous les yeux avant toute demande. Le plus simple : continuez dans la conversation où vous venez de vérifier votre fiche, elle y est déjà. Si vous ouvrez une nouvelle conversation, recollez la fiche et rejoignez vos fichiers.</p></div>
 
     <ul class="checks">
-      <li><label><input type="checkbox" data-key="c3-1"><span>J'ai ouvert une nouvelle conversation</span></label></li>
-      <li><label><input type="checkbox" data-key="c3-2"><span>J'ai collé ma fiche et joint la partie de chapitre concernée et mon dernier fichier</span></label></li>
+      <li><label><input type="checkbox" data-key="c3-1"><span>Je travaille dans la conversation où j'ai vérifié ma fiche (ou dans une nouvelle, avec la fiche recollée)</span></label></li>
+      <li><label><input type="checkbox" data-key="c3-2"><span>Claude a ma fiche, la partie de chapitre concernée et mon dernier fichier</span></label></li>
       <li><label><input type="checkbox" data-key="c3-3"><span>J'ai choisi : étendre mon outil, ou en faire un second</span></label></li>
     </ul>
 
@@ -342,6 +346,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour un deuxième outil, modifiable">Voici ma fiche de contexte : <mark>[collez votre fiche]</mark>. Mon premier outil est en pièce jointe, ainsi que <mark>[la partie du chapitre concernée]</mark>. Fais-moi un deuxième outil dans le même style, pour <mark>[ce que vous voulez travailler]</mark>. Fichier HTML à télécharger, nommé <mark>[nom]</mark>-v1.html.</div>
     </div>
+    <p class="hint">Vous continuez dans la conversation où la fiche et vos fichiers sont déjà ? Retirez simplement la première phrase de la demande.</p>
 
     <details>
       <summary>Vous avancez vite ? Pour aller plus loin</summary>
@@ -375,7 +380,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     </ul>
 
     <h3>Le test croisé</h3>
-    <p>Échangez vos outils avec votre voisin. Il teste le vôtre comme un élève qui n'a rien suivi : <strong>sans explication de votre part</strong>. Observez-le sans parler, et notez ce qui le fait hésiter.</p>
+    <p>Quand votre voisin est prêt lui aussi, échangez vos outils. Il teste le vôtre comme un élève qui n'a rien suivi : <strong>sans explication de votre part</strong>. Observez-le sans parler, et notez ce qui le fait hésiter.</p>
     <div class="table-scroll">
       <table class="test">
         <thead><tr><th scope="col">Problème</th><th scope="col">Où</th><th scope="col">Idée</th></tr></thead>

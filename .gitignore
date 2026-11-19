@@ -3,3 +3,6 @@
 *.pptx
 *.docx
 ~$*
+
+# Réglages locaux de Claude Code
+.claude/settings.local.json

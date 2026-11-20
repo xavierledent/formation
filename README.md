@@ -17,8 +17,8 @@ La formation repose sur un cycle en quatre temps, que l'on parcourt plusieurs fo
 
 | Jour | Objectif | Contenu |
 |------|----------|---------|
-| 1 | Un premier outil | Connexion à Claude, choix de la cible, premier tour complet du cycle. |
-| 2 | Un outil prêt pour la classe | Rédaction de la fiche de contexte, extension de l'outil, test en binôme, partage. |
+| 1 | Un premier outil | Connexion à Claude, choix de la cible (et la question : un outil apporte-t-il vraiment quelque chose ?), premier tour complet du cycle. |
+| 2 | Un outil prêt pour la classe | Rédaction de la fiche de contexte, extension de l'outil, test en binôme (biais de l'IA compris), partage, grille d'évaluation finale. |
 
 À la fin des deux jours, chaque participant repart avec :
 

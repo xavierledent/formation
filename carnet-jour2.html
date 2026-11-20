@@ -141,6 +141,24 @@
   table.test td { padding: 0 6px 0 0; }
   .cell { padding: 8px 12px; font-size: 15px; }
 
+  /* Grille d'évaluation */
+  table.grille { width: 100%; min-width: 560px; border-collapse: separate; border-spacing: 0 6px; }
+  table.grille th { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--cobalt); padding: 0 8px 2px; text-align: center; width: 92px; }
+  table.grille th:first-child { text-align: left; width: auto; }
+  table.grille td { background: var(--field); padding: 10px 8px; text-align: center; vertical-align: middle; }
+  table.grille td:first-child { text-align: left; padding-left: 14px; border-radius: 12px 0 0 12px; }
+  table.grille td:last-child { border-radius: 0 12px 12px 0; }
+  table.grille td strong { display: block; }
+  table.grille td .q { font-size: 14.5px; line-height: 1.45; }
+  table.grille .must { display: inline-block; margin-left: 6px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--orange, #b4540f); }
+  table.grille label { display: flex; justify-content: center; align-items: center; min-height: 40px; cursor: pointer; border-radius: 10px; }
+  table.grille label:hover { background: var(--white); }
+  table.grille input { width: 22px; height: 22px; margin: 0; accent-color: var(--cobalt); cursor: pointer; }
+  table.grille tr.l1 td { background: #fff1e6; }
+  table.grille tr.l2 td { background: #fff8e2; }
+  table.grille tr.l3 td { background: #e9f7f0; }
+  .grille-bilan { font-weight: 600; color: var(--navy); min-height: 1.5em; }
+
   dl.lexique { margin: 0 0 14px; }
   dl.lexique dt { font-family: var(--display); font-weight: 800; font-size: 1.15rem; color: var(--navy); letter-spacing: -.02em; margin-top: 14px; }
   dl.lexique dd { margin: 2px 0 0; }
@@ -297,7 +315,8 @@
     <button type="button" class="tab" role="tab" data-target="construire" id="tab-construire" aria-controls="construire">3 · Construire</button>
     <button type="button" class="tab" role="tab" data-target="tester" id="tab-tester" aria-controls="tester">4 · Tester</button>
     <button type="button" class="tab" role="tab" data-target="ameliorer" id="tab-ameliorer" aria-controls="ameliorer">5 · Améliorer</button>
-    <button type="button" class="tab" role="tab" data-target="cloture" id="tab-cloture" aria-controls="cloture">6 · Clôture</button>
+    <button type="button" class="tab" role="tab" data-target="grille" id="tab-grille" aria-controls="grille">6 · Grille</button>
+    <button type="button" class="tab" role="tab" data-target="cloture" id="tab-cloture" aria-controls="cloture">7 · Clôture</button>
     <button type="button" class="tab" role="tab" data-target="blocage" id="tab-blocage" aria-controls="blocage">En cas de blocage</button>
   </div>
 </nav>
@@ -327,7 +346,7 @@
     </div>
     <ul>
       <li><strong>Ce matin</strong> : sections 2 et 3, votre fiche de contexte puis un outil qui avance.</li>
-      <li><strong>Cet après-midi</strong> : sections 4 et 5, puis la clôture tous ensemble.</li>
+      <li><strong>Cet après-midi</strong> : sections 4 et 5, la grille d'évaluation, puis la clôture tous ensemble.</li>
     </ul>
   </section>
 
@@ -438,6 +457,9 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande pour un deuxième outil, modifiable">Voici ma fiche de contexte : <mark>[collez votre fiche]</mark>. Mon premier outil est en pièce jointe, ainsi que <mark>[la partie du chapitre concernée]</mark>. Fais-moi un deuxième outil dans le même style, pour <mark>[ce que vous voulez travailler]</mark>. Fichier HTML à télécharger, nommé <mark>[nom]</mark>-v1.html.</div>
     </div>
     <p class="hint">Vous continuez dans la conversation où la fiche et vos fichiers sont déjà ? Retirez simplement la première phrase de la demande.</p>
+    <div class="encart attention">
+      <p><strong><span class="hl">Avant de choisir l'option B.</span></strong> Reposez-vous la question d'hier : ce deuxième outil apporte-t-il vraiment quelque chose de plus qu'un cours classique ? Un outil solide et bien testé vaut mieux que deux outils moyens.</p>
+    </div>
 
     <details class="plus">
       <summary>Vous avancez vite ? Pour aller plus loin</summary>
@@ -471,6 +493,28 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
       <li><label><input type="checkbox" data-key="c4-6"><span>Ça tient sur un petit écran</span></label></li>
       <li><label><input type="checkbox" data-key="c4-10"><span>Il fonctionne sans Internet (Wi-Fi coupé)</span></label></li>
     </ul>
+
+    <h3>Les biais de l'IA</h3>
+    <p>Claude a appris sur d'immenses quantités de textes écrits par des humains, avec leurs stéréotypes. Il les reproduit sans le vouloir, surtout dans ce qu'on relit le moins : les énoncés, les prénoms, les exemples. Quelques biais fréquents :</p>
+    <ul>
+      <li><strong>De genre</strong> : c'est Lucas qui construit la fusée et Emma qui fait les courses ; les scientifiques cités sont tous des hommes ; on lit « l'ingénieur » et « l'infirmière ».</li>
+      <li><strong>Culturels et sociaux</strong> : toujours les mêmes prénoms, des vacances au ski, un budget de famille aisée, des situations qui ne parlent qu'à une partie de la classe.</li>
+      <li><strong>De langue</strong> : des consignes longues ou un vocabulaire qui supposent qu'on maîtrise déjà bien le français.</li>
+    </ul>
+    <p>Un énoncé isolé ne pose pas de problème. C'est la répétition qui envoie un message : « les maths, c'est pour qui ? » Il ne s'agit pas de compter, mais d'éviter que ce soit toujours les mêmes qui agissent.</p>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c4-11"><span>J'ai relu les énoncés et les exemples : qui agit, qui fait quoi ?</span></label></li>
+      <li><label><input type="checkbox" data-key="c4-12"><span>Les prénoms, les métiers et les situations sont variés</span></label></li>
+      <li><label><input type="checkbox" data-key="c4-13"><span>Les exemples parlent à tous mes élèves</span></label></li>
+    </ul>
+    <p>Claude peut vous aider à repérer ses propres biais :</p>
+    <div class="prompt">
+      <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande de relecture des biais, modifiable">Relis tous les énoncés, exemples et messages de mon outil (fichier en pièce jointe). Repère les stéréotypes possibles : de genre (qui fait quoi, quels métiers, quels prénoms), culturels ou sociaux, et les formulations difficiles pour un élève qui maîtrise mal le français. Ne modifie rien : fais-moi un tableau avec ce que tu as trouvé et une proposition plus équilibrée.</div>
+    </div>
+    <div class="encart astuce">
+      <p>Il ne voit pas tout, puisque ses biais viennent de lui. La relecture reste la vôtre : vous connaissez vos élèves, pas lui.</p>
+    </div>
 
     <h3>Le test croisé</h3>
     <p>Quand votre voisin est prêt lui aussi, échangez vos outils. Il teste le vôtre comme un élève qui n'a rien suivi : <strong>sans explication de votre part</strong>. Observez-le sans parler, et notez ce qui le fait hésiter.</p>
@@ -535,9 +579,45 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     </ul>
   </section>
 
-  <!-- 6. CLÔTURE -->
-  <section class="bloc" id="cloture" data-title="6 · Clôture">
-    <div class="bloc-head"><span class="big-num">6</span><h2>Clôture</h2></div>
+  <!-- 6. GRILLE -->
+  <section class="bloc" id="grille" data-title="6 · Grille">
+    <div class="bloc-head"><span class="big-num">6</span><h2>Grille d'évaluation</h2></div>
+    <p class="objectif">Objectif : savoir honnêtement où en est mon outil avant de le donner à mes élèves.</p>
+    <p>Pour chaque critère, choisissez où en est votre outil <strong>aujourd'hui</strong>. Ce n'est pas une note : c'est une liste de ce qu'il reste à faire. Un outil n'a pas besoin d'être « oui » partout pour servir en classe, mais les trois premières lignes, elles, ne se négocient pas.</p>
+    <div class="table-scroll">
+      <table class="grille">
+        <thead><tr><th scope="col">Critère</th><th scope="col">Pas encore</th><th scope="col">En partie</th><th scope="col">Oui</th></tr></thead>
+        <tbody id="grilleRows"></tbody>
+      </table>
+    </div>
+    <p id="grilleBilan" class="grille-bilan" aria-live="polite"></p>
+
+    <h3>Le regard d'un autre</h3>
+    <p>Demandez à votre voisin de remplir la grille pour votre outil, de son côté, puis comparez : là où vous n'êtes pas d'accord, il y a souvent quelque chose à voir. Vous pouvez aussi demander à Claude de l'appliquer (en gardant en tête qu'il a tendance à être indulgent) :</p>
+    <div class="prompt">
+      <div class="prompt-bar"><span>Demande à copier</span><button class="btn-copy" type="button">Copier</button></div>
+      <div class="prompt-text" contenteditable="true" spellcheck="false" aria-label="Demande d'évaluation avec la grille, modifiable">Évalue mon outil (fichier en pièce jointe) avec cette grille. Pour chaque critère, réponds « pas encore », « en partie » ou « oui », avec une phrase de justification. Sois exigeant, comme un collègue qui va l'utiliser avec sa classe. Ne modifie rien.
+1. Il apporte quelque chose qu'un cours classique ou une feuille d'exercices n'apporte pas.
+2. Les mathématiques, les sciences et les corrections sont exactes.
+3. Il ne contient aucune donnée d'élève (nom, cote, photo).
+4. Quand l'élève se trompe, il comprend pourquoi.
+5. Un élève s'en sert seul, sans explication de l'enseignant.
+6. Il accepte les différentes écritures d'une bonne réponse, fonctionne sans Internet et sur un petit écran.
+7. Les énoncés et les exemples évitent les stéréotypes (genre, culture, milieu social).
+8. Il est agréable à regarder et à utiliser pour l'âge des élèves.</div>
+    </div>
+
+    <h3>Ma priorité</h3>
+    <div class="note"><label for="ng">Notes : la première chose que je retravaille, et quand</label><textarea id="ng" data-key="ng" data-label="La première chose que je retravaille, et quand" placeholder="Écrivez ici…"></textarea></div>
+    <ul class="checks">
+      <li><label><input type="checkbox" data-key="c6-5"><span>J'ai rempli ma grille</span></label></li>
+      <li><label><input type="checkbox" data-key="c6-6"><span>J'ai comparé avec la grille de mon voisin (ou avec l'avis de Claude)</span></label></li>
+    </ul>
+  </section>
+
+  <!-- 7. CLÔTURE -->
+  <section class="bloc" id="cloture" data-title="7 · Clôture">
+    <div class="bloc-head"><span class="big-num">7</span><h2>Clôture</h2></div>
     <p class="objectif">Objectif : repartir avec un outil, une fiche et un plan.</p>
 
     <h3>Présentations</h3>
@@ -569,7 +649,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     <p style="margin-top:16px"><strong>Merci d'avoir essayé, et de vous être trompé.</strong> C'est comme cela qu'on apprend.</p>
   </section>
 
-  <!-- 7. EN CAS DE BLOCAGE -->
+  <!-- EN CAS DE BLOCAGE -->
   <section class="bloc" id="blocage" data-title="En cas de blocage">
     <div class="bloc-head"><h2>En cas de blocage</h2></div>
     <ol class="steps">
@@ -625,6 +705,68 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     });
     tbody.appendChild(tr);
   }
+
+  /* ---------- Grille d'évaluation ---------- */
+  var CRITERES = [
+    ['Plus-value', 'Il apporte quelque chose qu\'un cours classique ou une feuille d\'exercices n\'apporte pas.', true],
+    ['Exactitude', 'Les maths, les sciences et les corrections sont justes : je les ai vérifiées moi-même.', true],
+    ['Données', 'Aucune donnée d\'élève dans le fichier : ni nom, ni cote, ni photo.', true],
+    ['Retour à l\'élève', 'Quand l\'élève se trompe, il comprend pourquoi.', false],
+    ['Autonomie', 'Un élève s\'en sert seul, sans mes explications (test croisé).', false],
+    ['Robustesse', 'Il accepte les différentes écritures d\'une bonne réponse, fonctionne sans Internet et sur un petit écran.', false],
+    ['Représentations', 'Les énoncés et les exemples évitent les stéréotypes (genre, culture, milieu).', false],
+    ['Aspect', 'Il est agréable à regarder et à utiliser pour l\'âge de mes élèves.', false]
+  ];
+  var NIVEAUX = ['Pas encore', 'En partie', 'Oui'];
+  var grilleBody = document.getElementById('grilleRows');
+  CRITERES.forEach(function (c, i) {
+    var tr = document.createElement('tr');
+    var td = document.createElement('td');
+    var st = document.createElement('strong');
+    st.textContent = c[0];
+    if (c[2]) { var m = document.createElement('span'); m.className = 'must'; m.textContent = 'indispensable'; st.appendChild(m); }
+    var q = document.createElement('span'); q.className = 'q'; q.textContent = c[1];
+    td.appendChild(st); td.appendChild(q); tr.appendChild(td);
+    NIVEAUX.forEach(function (niv, n) {
+      var cell = document.createElement('td');
+      var lab = document.createElement('label');
+      var r = document.createElement('input');
+      r.type = 'radio'; r.name = 'g' + i; r.value = String(n + 1);
+      r.setAttribute('aria-label', c[0] + ' : ' + niv);
+      lab.appendChild(r); cell.appendChild(lab); tr.appendChild(cell);
+    });
+    grilleBody.appendChild(tr);
+  });
+  function grilleGet(i) {
+    var r = grilleBody.querySelector('input[name="g' + i + '"]:checked');
+    return r ? r.value : '';
+  }
+  function grilleSetRow(i, v) {
+    Array.prototype.forEach.call(grilleBody.querySelectorAll('input[name="g' + i + '"]'), function (r) { r.checked = r.value === v; });
+    grilleBody.rows[i].className = v ? 'l' + v : '';
+  }
+  function grilleBilan() {
+    var n = [0, 0, 0, 0], bloque = [];
+    CRITERES.forEach(function (c, i) {
+      var v = grilleGet(i);
+      n[v ? +v : 0]++;
+      if (c[2] && v && v !== '3') bloque.push(c[0].toLowerCase());
+    });
+    var el = document.getElementById('grilleBilan');
+    if (n[0] === CRITERES.length) { el.textContent = ''; return; }
+    var t = n[3] + ' « oui », ' + n[2] + ' « en partie », ' + n[1] + ' « pas encore »';
+    if (n[0]) t += ', ' + n[0] + ' sans réponse';
+    t += '.';
+    if (bloque.length) t += ' À régler avant la classe : ' + bloque.join(', ') + '.';
+    el.textContent = t;
+  }
+  CRITERES.forEach(function (c, i) {
+    grilleSetRow(i, sGet('g' + i) || '');
+    Array.prototype.forEach.call(grilleBody.querySelectorAll('input[name="g' + i + '"]'), function (r) {
+      r.addEventListener('change', function () { sSet('g' + i, r.value); grilleSetRow(i, r.value); grilleBilan(); });
+    });
+  });
+  grilleBilan();
 
   /* ---------- Champs enregistrés ---------- */
   var fields = document.querySelectorAll('textarea[data-key]');
@@ -710,6 +852,11 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
         if (c.join('')) rows.push('- Problème : ' + c[0] + ' | Où : ' + c[1] + ' | Idée : ' + c[2]);
       });
       if (rows.length) chunk.push('', 'Ce que j\'ai trouvé :', rows.join('\n'));
+      if (sec.querySelector('#grilleRows')) {
+        var g = [];
+        CRITERES.forEach(function (c, i) { var v = grilleGet(i); if (v) g.push('- ' + c[0] + ' : ' + NIVEAUX[+v - 1]); });
+        if (g.length) chunk.unshift('Ma grille :', g.join('\n'), '');
+      }
       if (chunk.length) {
         lines.push('=== ' + sec.getAttribute('data-title') + ' ===');
         lines = lines.concat(chunk);
@@ -718,6 +865,7 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     });
     Array.prototype.forEach.call(fields, function (el) { if (el.value) data[el.getAttribute('data-key')] = el.value; });
     Array.prototype.forEach.call(boxes, function (b) { if (b.checked) data[b.getAttribute('data-key')] = '1'; });
+    CRITERES.forEach(function (c, i) { var v = grilleGet(i); if (v) data['g' + i] = v; });
     lines.push('', MARK_START, JSON.stringify(data), MARK_END, '');
     var blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
     var a = document.createElement('a');
@@ -749,6 +897,11 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
         var k = b.getAttribute('data-key');
         if (Object.prototype.hasOwnProperty.call(data, k)) { b.checked = data[k] === '1'; sSet(k, b.checked ? '1' : '0'); n++; }
       });
+      CRITERES.forEach(function (c, i) {
+        var v = data['g' + i];
+        if (v === '1' || v === '2' || v === '3') { grilleSetRow(i, v); sSet('g' + i, v); n++; }
+      });
+      grilleBilan();
       updateProgress();
       say(n + (n > 1 ? ' éléments importés.' : ' élément importé.'));
     };
@@ -767,6 +920,8 @@ Ce qui n'a pas marché : le bouton « Valider » était trop petit sur tablette 
     clearTimeout(resetTimer); resetTimer = null;
     Array.prototype.forEach.call(fields, function (el) { el.value = ''; sDel(el.getAttribute('data-key')); });
     Array.prototype.forEach.call(boxes, function (b) { b.checked = false; sDel(b.getAttribute('data-key')); });
+    CRITERES.forEach(function (c, i) { grilleSetRow(i, ''); sDel('g' + i); });
+    grilleBilan();
     updateProgress();
     resetBtn.textContent = 'Effacer mes notes';
     say('Notes effacées.');
